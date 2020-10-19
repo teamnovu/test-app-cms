@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eaea269f4740737ecce36cc2616ef7b1",
+    "content-hash": "e7b883281cdff83f624a53e75cdf79c9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3520,17 +3520,11 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.0.19",
+            "version": "v3.0.22",
             "source": {
                 "type": "git",
-                "url": "https://github.com/statamic/cms.git",
-                "reference": "64eadfd486c4fa209832202975066dbf1720f4d5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/64eadfd486c4fa209832202975066dbf1720f4d5",
-                "reference": "64eadfd486c4fa209832202975066dbf1720f4d5",
-                "shasum": ""
+                "url": "https://github.com/teamnovu/cms.git",
+                "reference": "bfbc17f3bdf715201261ae7d5522358996f64d94"
             },
             "require": {
                 "composer/composer": "^1.10",
@@ -3559,7 +3553,7 @@
             "type": "library",
             "extra": {
                 "download-dist": {
-                    "url": "https://github.com/statamic/cms/releases/download/{$version}/dist.tar.gz",
+                    "url": "https://github.com/teamnovu/cms/releases/download/{$version}/dist.tar.gz",
                     "path": "resources/dist"
                 },
                 "laravel": {
@@ -3579,7 +3573,12 @@
                     "src/helpers.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests",
+                    "Foo\\Bar\\": "tests/fixtures/Addon"
+                }
+            },
             "license": [
                 "proprietary"
             ],
@@ -3590,13 +3589,7 @@
                 "laravel",
                 "statamic"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/statamic",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-10-15T20:45:32+00:00"
+            "time": "2020-10-19T09:40:47+00:00"
         },
         {
             "name": "statamic/stringy",
