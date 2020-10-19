@@ -23,7 +23,7 @@ return [
     |
     */
 
-    'redirect' => 'home',
+    'redirect' => 'cp',
 
     /*
     |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ return [
     |
     */
 
-    'callback' => 'api/oauth/novu/callback',
+    'callback' => 'novu-auth/callback',
 
     /*
     |--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return [
     | This option controls the model should be used as Authenticable.
     */
 
-    'model' => App\User::class,
+    'model' => Statamic\Auth\User::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'guard' => 'api',
+    'guard' => 'web',
 
     /*
     |--------------------------------------------------------------------------
@@ -97,7 +97,9 @@ return [
     |
     */
 
-    'user-attributes' => [],
+    'user-attributes' => [
+        'super' => true,
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -110,5 +112,19 @@ return [
     |
     */
 
-    'user-factory' => \App\Auth\UserAttributesFactory::class,
+    'user-factory' => \Novu\Auth\UserAttributesFactory::class,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Manager to be used for creating users
+    |--------------------------------------------------------------------------
+    |
+    | This option controls the manager that should be used to find
+    | existing or create new users authenticated with novu-auth.
+    | There is also a Manager to be used in Statamic projects.
+    |
+    |
+    */
+
+    'user-manager' => \Novu\Auth\UserManagerStatamic::class,
 ];
