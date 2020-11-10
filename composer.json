@@ -10,6 +10,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
+        "spatie/image": "^1.7",
         "statamic/cms": "3.0.23",
         "teamnovu/laravel-novu-auth": "^3.1"
     },
