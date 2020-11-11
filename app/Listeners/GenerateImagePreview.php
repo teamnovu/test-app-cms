@@ -21,6 +21,10 @@ class GenerateImagePreview
         $tempName = uniqid('img_preview');
         $tempDestination = public_path('assets/' . $tempName . '.' . $imageExt);
 
+        if (!in_array(strtolower($imageExt), array('jpg', 'png', 'gif', 'webp'))) {
+            return;
+        }
+
         try {
             $img = Image::load($imagePath);
             $originalImageHeight = $img->getHeight();
