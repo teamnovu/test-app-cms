@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Http\Resources\CustomEntryResource;
 use Illuminate\Support\ServiceProvider;
-use Statamic\Statamic;
+use Statamic\Http\Resources\API\EntryResource;
+use Statamic\Http\Resources\API\Resource;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,6 +26,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Resource::map([
+            EntryResource::class => CustomEntryResource::class
+        ]);
         // Statamic::script('app', 'cp');
         // Statamic::style('app', 'cp');
     }
