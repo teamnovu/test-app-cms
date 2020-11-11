@@ -6,7 +6,6 @@ use Illuminate\Auth\Events\Registered;
 use App\Listeners\GenerateImagePreview;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Statamic\Events\AssetSaved;
 use Statamic\Events\AssetUploaded;
 
 class EventServiceProvider extends ServiceProvider
@@ -20,9 +19,9 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class
         ],
-        AssetUploaded::class => [
-            GenerateImagePreview::class
-        ]
+        // AssetUploaded::class => [
+        //     GenerateImagePreview::class
+        // ]
     ];
 
     /**

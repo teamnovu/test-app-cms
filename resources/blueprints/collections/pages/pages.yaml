@@ -41,6 +41,7 @@ sections:
           type: assets
           icon: assets
           listable: hidden
+          container: assets
   sidebar:
     display: Sidebar
     fields:

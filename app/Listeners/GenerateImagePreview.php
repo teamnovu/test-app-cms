@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use Exception;
 use Spatie\Image\Image;
 use Spatie\Image\Manipulations;
 use Statamic\Events\AssetUploaded;
@@ -21,26 +22,31 @@ class GenerateImagePreview
         $tempName = uniqid('img_preview');
         $tempDestination = public_path('assets/' . $tempName . '.' . $imageExt);
 
-        $img = Image::load($imagePath);
-        $originalImageHeight = $img->getHeight();
-        $originalImageWidth = $img->getWidth();
+        try {
+            $img = Image::load($imagePath);
+            $originalImageHeight = $img->getHeight();
+            $originalImageWidth = $img->getWidth();
 
-        $img->optimize()->width(32)->blur(5)->format(Manipulations::FORMAT_JPG)->save($tempDestination);
+            $img->optimize()->width(32)->blur(5)->format(Manipulations::FORMAT_JPG)->save($tempDestination);
 
-        $tinyImageDataBase64 = base64_encode(file_get_contents($tempDestination));
-        $tinyImageBase64 = 'data:image/jpeg;base64,' . $tinyImageDataBase64;
+            $tinyImageDataBase64 = base64_encode(file_get_contents($tempDestination));
+            $tinyImageBase64 = 'data:image/jpeg;base64,' . $tinyImageDataBase64;
 
-        $svg = view('placeholderSvg', compact(
-            'originalImageWidth',
-            'originalImageHeight',
-            'tinyImageBase64'
-        ));
+            $svg = view('placeholderSvg', compact(
+                'originalImageWidth',
+                'originalImageHeight',
+                'tinyImageBase64'
+            ));
 
-        $base64Svg = 'data:image/svg+xml;base64,' . base64_encode($svg);
+            $base64Svg = 'data:image/svg+xml;base64,' . base64_encode($svg);
 
-        $event->asset->set('preview', $base64Svg);
-        $event->asset->save();
-
-        unlink($tempDestination);
+            $event->asset->set('preview', $base64Svg);
+            $event->asset->save();
+        } catch (Exception $err) {
+        } finally {
+            if (file_exists($tempDestination)) {
+                unlink($tempDestination);
+            }
+        }
     }
 }
