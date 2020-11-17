@@ -1,8 +1,16 @@
-title: Asset
-fields:
-  -
-    handle: alt
-    field:
-      display: 'Alt Text'
-      type: text
-      instructions: 'Description of the image'
+sections:
+  main:
+    display: Main
+    fields:
+      - handle: alt
+        field:
+          display: "Alt Text"
+          type: text
+          instructions: "Description of the image"
+      - handle: preview
+        field:
+          input_type: text
+          display: preview
+          type: text
+          icon: text
+          listable: hidden

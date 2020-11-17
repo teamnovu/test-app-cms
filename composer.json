@@ -1,7 +1,12 @@
 {
     "name": "statamic/statamic",
     "description": "Statamic",
-    "keywords": ["statamic", "cms", "flat file", "laravel"],
+    "keywords": [
+        "statamic",
+        "cms",
+        "flat file",
+        "laravel"
+    ],
     "type": "project",
     "require": {
         "php": "^7.3",
@@ -9,8 +14,10 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
+        "laravel/telescope": "^4.3",
         "laravel/tinker": "^2.0",
-        "statamic/cms": "3.0.23",
+        "spatie/image": "^1.7",
+        "statamic/cms": "3.0.27",
         "teamnovu/laravel-novu-auth": "^3.1"
     },
     "require-dev": {
