@@ -1,0 +1,9 @@
+title: Test
+template: default
+layout: layout
+revisions: false
+route: 'test/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
