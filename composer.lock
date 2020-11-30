@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1d8c7171d36432cfe16b1a23f26b73f",
+    "content-hash": "2e9db9f1b5d21021c11279e115cf4ba8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5971,67 +5971,6 @@
                 }
             ],
             "time": "2020-11-28T10:57:20+00:00"
-        },
-        {
-            "name": "teamnovu/laravel-novu-auth",
-            "version": "v3.1.1",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:teamnovu/laravel-novu-auth.git",
-                "reference": "489c341ad3113a496608c3a40e3bce63055a0d93"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://satis.novu.ch/dist/teamnovu/laravel-novu-auth/teamnovu-laravel-novu-auth-489c341ad3113a496608c3a40e3bce63055a0d93-zip-df18f8.zip",
-                "reference": "489c341ad3113a496608c3a40e3bce63055a0d93",
-                "shasum": "d6c99d64aea7a5d9a529acf98668af80a08752eb"
-            },
-            "require": {
-                "guzzlehttp/guzzle": "6.*|7.*",
-                "illuminate/support": "^6.0|^7.0|^8.0",
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^4.0|^5.0|^6.0",
-                "phpunit/phpunit": "^8.0|^9.0"
-            },
-            "suggest": {
-                "statamic/cms": "If you want to use this package in a Statamic Project consult Readme for further instruction."
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Novu\\Auth\\NovuAuthServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Novu\\Auth\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Novu\\Auth\\Tests\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "phpunit"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oliver Kaufmann",
-                    "email": "kaufmann@novu.ch"
-                }
-            ],
-            "homepage": "https://github.com/teamnovu/laravel-novu-auth",
-            "time": "2020-09-15T11:22:39+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

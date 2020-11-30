@@ -1,7 +1,7 @@
 name: 'Benaja Hunzinger'
 super: true
 id: 0feef61d-a5f2-4d08-8175-c00d5c14353e
-password_hash: $2y$10$x8hP4Pfo0SxLqoMEdduvDeHqq0mibmUp5J/CCYdk4g1jEY7.bPOBW
+password_hash: $2y$10$tLJWJu5Z4kCYhPzRMBcv1eBHpLAnT1UBtxdMKIhNGQeMJ0veP0E5a
 preferences:
   collections:
     pages:

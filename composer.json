@@ -15,8 +15,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
-        "statamic/cms": "3.0.23",
-        "teamnovu/laravel-novu-auth": "^3.1"
+        "statamic/cms": "3.0.23"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
@@ -27,10 +26,6 @@
         "phpunit/phpunit": "^9.3"
     },
     "repositories": [
-        {
-            "type": "composer",
-            "url": "https://satis.novu.ch/"
-        },
         {
             "type": "git",
             "url": "https://github.com/teamnovu/cms.git"
